@@ -1,0 +1,105 @@
+type: api_product
+version: v4.0.0
+data:
+  id: 2330a32d-fd22-44c8-b9db-c2d7164038ee
+  name: PetStoreAPI
+  context: /pet-store
+  provider: admin
+  state: PUBLISHED
+  enableSchemaValidation: false
+  isRevision: false
+  revisionId: 0
+  responseCachingEnabled: false
+  cacheTimeout: 300
+  visibility: PUBLIC
+  visibleRoles: []
+  visibleTenants: []
+  accessControl: NONE
+  accessControlRoles: []
+  transport:
+   - http
+   - https
+  tags: []
+  policies:
+   - Unlimited
+  authorizationHeader: Authorization
+  securityScheme:
+   - oauth2
+   - oauth_basic_auth_api_key_mandatory
+  subscriptionAvailability: ALL_TENANTS
+  subscriptionAvailableTenants: []
+  additionalProperties: []
+  businessInformation: {}
+  corsConfiguration:
+    corsConfigurationEnabled: false
+    accessControlAllowOrigins:
+     - '*'
+    accessControlAllowCredentials: false
+    accessControlAllowHeaders:
+     - authorization
+     - Access-Control-Allow-Origin
+     - Content-Type
+     - SOAPAction
+     - apikey
+     - Internal-Key
+    accessControlAllowMethods:
+     - GET
+     - PUT
+     - POST
+     - DELETE
+     - PATCH
+     - OPTIONS
+  createdTime: 2021-10-06 11:09:51.388
+  lastUpdatedTime: 2021-10-06 11:09:51.519
+  apis:
+   -
+    name: SwaggerPetstore
+    apiId: 57f20dd9-8932-45e7-adef-a8c3bfa11f3e
+    version: 1.0.0
+    operations:
+     -
+      id: ""
+      target: /pet/findByStatus
+      verb: GET
+      authType: Application & Application User
+      throttlingPolicy: Unlimited
+      scopes:
+       - write:pets
+       - read:pets
+      usedProductIds: []
+     -
+      id: ""
+      target: /pet/findByTags
+      verb: GET
+      authType: Application & Application User
+      throttlingPolicy: Unlimited
+      scopes:
+       - write:pets
+       - read:pets
+      usedProductIds: []
+     -
+      id: ""
+      target: /pet/{petId}
+      verb: GET
+      authType: Application & Application User
+      throttlingPolicy: Unlimited
+      scopes:
+       - write:pets
+       - read:pets
+      usedProductIds: []
+  scopes:
+   -
+    scope:
+      name: read:pets
+      displayName: read:pets
+      description: read your pets
+      bindings: []
+    shared: false
+   -
+    scope:
+      name: write:pets
+      displayName: write:pets
+      description: modify pets in your account
+      bindings: []
+    shared: false
+  categories: []

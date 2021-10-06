@@ -1,0 +1,7 @@
+deploy:
+  import:
+    importApis: true
+    preserveProvider: true
+    updateApiProduct: true
+name: PetStoreAPI
+version: 1.0.0
